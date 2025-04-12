@@ -8,8 +8,6 @@
 
 // Please solve it without the built-in Array.filter method.
 
- 
-
 // Example 1:
 
 // Input: arr = [0,10,20,30], fn = function greaterThan10(n) { return n > 10; }
@@ -36,14 +34,21 @@
  * @param {Function} fn
  * @return {number[]}
  */
-var filter = function(arr, fn) {
-    let filteredArr = []
+var filter = function (arr, fn) {
+  let filteredArr = [];
 
-    for (let i=0; i<arr.length; i++){
-      if (fn(arr[i], i)){
-        filteredArr.push(arr[i])
-      }
-
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i], i)) {
+      filteredArr.push(arr[i]);
     }
-    return filteredArr;
+  }
+  return filteredArr;
 };
+
+//example with filter method
+
+// var filter = function(arr, fn){
+//     arr.filter((n,i)=>{
+//       return n > 10;
+//     })
+// }
